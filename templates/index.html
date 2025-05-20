@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing detection</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <img class="flip-image" src="../static/logo.png" >
+            <ul>
+                <li><a href="index.html">TOOL</a></li>
+                <li><a href="about.html">RESOURCES</a></li>
+            </ul>
+        </nav>
+        <header>
+            <p>PHISHING URL DETECTION TOOL</p>
+        </header>
+        <main>
+            <div class="site-info"id="phishingForm">
+                <p class="intro">Check, is it safe to visit</p>
+                <input type="text" id="urlInput" placeholder="INPUT URL" required>
+                <div class=execute-bts>
+                    <button onclick="submitForm()" type="submit" class="scan-bts" id="scanBtn">Scan</button>
+                        <div id="loader" style="display: none;">
+                            <p>Scanning URL... Please wait.</p>
+                            <img src="../static/Spinner.gif" alt="Loading..." width="50">
+                        </div>
+                    <button type="reset" class="scan-bts">Reset</button>
+                </div>
+            </div>
+            <div class="data-img">
+                <img src="../static/rmbg1.png" width="700px">
+            </div>
+            <div class="about-container">
+        <h1>About the Phishing Detection System</h1>
+        <div class="section">
+            <p>
+                The <strong>Phishing Detection and Awareness System</strong> is a web-based cybersecurity tool designed to help users identify potentially malicious URLs and educate them about phishing threats.
+            </p>
+            <p>
+                Leveraging a machine learning model (XGBoost), the system analyzes URLs using features such as URL length, domain age, HTTPS presence, and suspicious keywords to classify them as <strong>phishing</strong> or <strong>legitimate</strong>.
+            </p>
+            <ul>
+                <li>Real-time detection with FastAPI backend</li>
+                <li>User-friendly frontend (HTML, CSS, JS)</li>
+                <li>Educational tips on phishing awareness</li>
+                <li>High accuracy using diverse dataset sources (PhishTank, OpenPhish, Alexa Top Sites, Kaggle)</li>
+            </ul>
+        </div>
+
+        <h2>About the Author</h2>
+        <div class="section author">
+            <img src="../static/pic2.JPG" alt="Author" class="author-img">
+            <div class="author-info">
+                <p><strong>Numfor Bryan Assah</strong> is a Bachelor’s student in Cybersecurity at ICT University.</p>
+                <p>He developed this project as part of his final year dissertation to address real-world phishing threats. Bryan specializes in applying machine learning for threat detection and also has hands-on experience in web development and digital forensics.</p>
+            </div>
+        </div>
+    </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h3>Contact Us </h3>
+                <p>Email: <a href="bryannumfor@gmail.com"><i class="fa-solid fa-envelope" style="color: white"></i></a></p>
+                <p>Phone: <a href=https://wa.link/qaur5b><i class="fa-brands fa-whatsapp" style="color: green;"></i></a></p>
+                <p>Location: Yaounde, Cameroon</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="https://linkedin.com/in/numfor-bryan" target="_blank" aria-label="LinkedIn">LinkedIn</a> | 
+                <a href="https://github.com/NumforBryan33232" target="_blank" aria-label="GitHub">GitHub</a> | 
+                <a href="https://instagram.com/ruffy_bryan" target="_blank" aria-label="Instagram">Instagram</a> | 
+                <a href="https://twitter.com/RuffyDayo" target="_blank" aria-label="Twitter">Twitter</a>
+            </div>
+            <div class="footer-credits">
+                <p>&copy; 2025 FINAL YEAR PROJECT. All Rights Reserved.</p>
+                <p>Built with ❤️ by NUMFOR BRYAN ASSAH.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../static/script.js"></script>
+    <script src="../static/JS/all.js"></script>
+</body>
+</html>

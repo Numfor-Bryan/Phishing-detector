@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Resources</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #container nav {
+            color: white;
+            background-color: black;
+            cursor: pointer;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+    
+        }
+        #container header {
+            padding: 5px 30px;
+            color: white;
+            background-color: rgb(41, 38, 38);
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        #container header:hover{
+            color: black;
+            background-color: rgba(245, 245, 245, 0.822);
+        }
+        #container nav .flip-image {
+            width: 110px;
+            height: 65px;
+            margin-left: 100px;
+            animation: flipPause 20s ease-in-out infinite;
+            transform-origin: center;
+        }
+        @keyframes flipPause {
+            0%   { transform: rotateY(0deg); }
+            10%  { transform: rotateY(180deg); }
+            60%  { transform: rotateY(180deg); } 
+            70% { transform: rotateY(0deg); }   
+            100% { transform: rotateY(0deg); }  
+        }
+        
+        #container nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: right;
+            gap: 20px;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+        
+        #container nav ul li a {
+            color: whitesmoke;
+            text-decoration: none;
+            text-decoration-thickness: 2px;
+        }
+
+        #container main .center-about {
+            display: flex;
+            justify-content: center;
+        }
+        summary {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: scaleIn 1s ease-out both;
+            z-index: 1;
+            margin-top: 20px;
+        }
+        summary:hover {
+            background-color: #2b81bb;
+        }
+        @keyframes colorChange {
+            0% { background-color: #0073e6; }
+            25% { background-color: #8f4737; }
+            50% { background-color: #923cac; }
+            75% { background-color: #86276f; }
+            100% { background-color: #0073e6; }
+        }
+        #container main .center-about .about-phishing .abt-heading {
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 50px;
+            animation: colorChange 5s infinite alternate;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        #container main .center-about .about-phishing {
+            width: 80%;
+            background-color: whitesmoke;
+            padding: 60px;
+            overflow: scroll;
+
+        }
+        #container main .center-about .about-phishing h3 {
+            margin-top: 12px;
+            line-height: 2;
+            letter-spacing: 0.5px;
+            word-spacing: 1px;
+        }
+        #container main .center-about .about-phishing p {
+                text-align: justify;
+                line-height: 1.6;
+                letter-spacing: 0.5px;
+                word-spacing: 1px;
+                text-indent: 20px;
+                white-space: normal;
+                font-size: 18px;
+            }
+
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+                font-size: 18px;
+                background: white;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: scroll;
+            }
+            th, td {
+                padding: 12px;
+                border: 1px solid #ddd;
+                text-align: left;
+            }
+            th {
+                background-color: #0073e6;
+                color: white;
+                text-transform: uppercase;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            
+            footer {
+                background-color: #222;
+                color: #fff;
+                padding: 20px 40px;
+                text-align: center;
+                width: 100%;
+            }
+            
+            footer .footer-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            footer .footer-container .footer-contact,
+            footer .footer-container .footer-social,
+            footer .footer-container .footer-credits {
+                margin: 10px;
+            }
+            
+            footer .footer-container.footer-contact h3,
+            footer .footer-container .footer-social h3 {
+                font-size: 1.2em;
+                margin-bottom: 8px;
+            }
+            
+            footer .footer-container .footer-contact a,
+            footer .footer-container .footer-social a {
+                color: #00bcd4;
+                text-decoration: none;
+            }
+            
+            footer .footer-container.footer-contact a:hover,
+            footer .footer-container .footer-social a:hover {
+                text-decoration: underline;
+            }
+            
+            footer .footer-container .footer-credits p {
+                margin: 5px 0;
+                font-size: 0.9em;
+            }
+        @media (max-width:950px) {
+            #container main .center-about .about-phishing {
+                padding: 20px;
+                width: 90%;
+            }
+            #container main .center-about .about-phishing h3 {
+                margin-top: 7px;
+                line-height: 2;
+                letter-spacing: 0.3px;
+                word-spacing: 0.5px;
+            }
+            #container main .center-about .about-phishing p {
+                    text-align: justify;
+                    line-height: 1.2;
+                    letter-spacing: 0.2px;
+                    word-spacing: 0.3px;
+                    text-indent: 1px;
+                    white-space: normal;
+                    font-size: 17px;
+            }
+            table {
+                margin: 0px;
+                font-size: 15px; 
+            th, td {
+                padding: 3px;
+            }
+            footer {
+                position: relative;
+            }
+
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <img class="flip-image" src="../static/logo.png" >
+            <ul>
+                <li><a href="index.html">TOOL</a></li>
+                <li><a href="about.html">RESOURCES</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="center-about">
+                <div class="about-phishing">
+                    <span class="abt-heading">Phishing Awareness</span>
+                    <details>
+                        <summary>What is Phishing</summary>
+                        <div class="dropdown-content">
+                            <p><b>Phishing</b> is a type of social engineering scam in which attackers manipulate individuals into disclosing sensitive information or downloading malicious software, </p>
+                            <p>such as viruses, worms, adware, or ransomware.</p>
+                            <p>These attacks have grown more advanced over time, often closely replicating the targeted website.</p>
+                            <p>This enables attackers to monitor the victim's activity as they interact with the site, including bypassing security measures alongside the victim.</p>
+                            <p>The term "phishing" was first documented in 1995 within the cracking toolkit AOHell, though it may have appeared earlier in the hacker magazine 2600.</p>
+                            <p>The name, derived from "fishing," symbolizes the use of bait to "fish" for sensitive information. </p>
+                            <p>Efforts to prevent or mitigate phishing attacks include legislation, user education, public awareness campaigns, and implementing technical security measures.</p>
+                            <p>Awareness of phishing has become increasingly critical in both personal and professional contexts.</p>
+                            <p>Phishing incidents among businesses grew from 72% in 2017 to 86% in 2020 and further surged to 94% by 2023.</p>
+                            <p>Here are some common types of phishing attacks, along with explanations and examples:</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Different types of phishing</summary>
+                        <div class="dropdown-content">
+                            <h3>Email Phishing</h3> 
+                            <p><b>Explanation:</b>Attackers send fraudulent emails that appear to come from a trusted source, tricking</p>
+                            <p>recipients into sharing sensitive information or clicking malicious links.</p> 
+                            <p><b>Example:</b>An email that looks like it's from a bank, urging the recipient to "confirm your account details" </p>
+                            <p>by clicking on a fake link and entering credentials on a counterfeit login page.</p>
+                            <h3>Spear Phishing</h3> 
+                            <p><b>Explanation:</b>A targeted form of phishing where attackers customize messages based on specific information about the victim (e.g., job role, organization).</p>  
+                            <p><b>Example:</b> A scam email sent to a company's finance manager, pretending to be the CEO, requesting an urgent wire transfer to a "partner account."</p>
+                            <h3>Whaling (CEO Fraud)</h3> 
+                            <p><b>Explanation:</b>A specialized type of spear phishing targeting high-profile individuals such as executives or senior management</p>
+                            <p><b>Example:</b>An attacker impersonates a company's CEO via email, requesting sensitive data from the HR department, such as employee tax records.</p>
+                            <h3>Smishing (SMS Phishing)</h3> 
+                            <p><b>Explanation:</b>Phishing attacks conducted through text messages, designed to lure victims into clicking malicious links or sharing personal information.</p>  
+                            <p><b>Example:</b>A text claiming to be from a delivery service, asking the recipient to click a link to "reschedule" a package delivery, leading to a fake website.</p>
+                            <h3>Vishing (Voice Phishing)</h3>
+                            <p><b>Explanation:</b>Phishing attacks carried out over phone calls, where attackers impersonate legitimate organizations to extract confidential details.</p> 
+                            <p><b>Example:</b>A scammer claiming to be from tech support, warning the victim of a "security breach" and convincing them to provide remote access to their computer.</p>
+                            <h3>Pharming</h3> 
+                            <p><b>Explanation:</b>Instead of directly contacting victims, attackers manipulate DNS settings to redirect users from legitimate websites to fraudulent ones.</p> 
+                            <p><b>Example:</b>When a user tries to access their bank’s website, they are redirected to a fake site that looks identical, where they enter their login credentials.</p>
+                            <h3>Clone Phishing</h3> 
+                            <p><b>Explanation:</b>An attacker copies a legitimate email (e.g., a newsletter or confirmation email) and modifies it to include malicious links or attachments.</p> 
+                            <p><b>Example:</b>A fake version of a flight confirmation email that includes a link to "check-in," leading to a malicious site.</p>
+                            <h3>Man-in-the-Middle Phishing</h3>
+                            <p><b>Explanation:</b>Attackers intercept communications between a user and a legitimate service, gaining unauthorized access to information.</p> 
+                            <p><b>Example:</b>An attacker sets up a rogue Wi-Fi hotspot labeled "Free Wi-Fi," allowing them to monitor user traffic and steal login credentials when users log in to accounts.</p>
+                            <h3>Pop-Up Phishing</h3> 
+                            <p><b>Explanation:</b>Phishing messages presented through pop-ups while a user is browsing, asking them to enter sensitive details or download harmful software. </p>
+                            <p><b>Example:</b>A pop-up claiming, "Your computer is infected! Click here to download antivirus software," which installs malware instead.</p>
+                            <h3>Social Media Phishing</h3> 
+                            <p><b>Explanation:</b>Attackers use fake profiles, direct messages, or posts on social media to lure victims into revealing personal details or clicking on malicious links.</p>  
+                            <p><b>Example:</b>A scammer posing as a friend sends a message on social media, asking, "Can you check out this photo I found of you?" and provides a malicious link.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Methods to avoid Phishing</summary>
+                        <div class="dropdown-content">
+                            <p>To protect yourself and your organization from phishing attacks, implement the following solutions:</p>
+                            <h3>Increase Awareness and Education</h3>  
+                            <p><b>Solution:</b> Regularly train employees and individuals to recognize phishing attempts and suspicious behaviors. </p> 
+                            <p><b>How:</b> 
+                            <p>Conduct workshops, webinars, or online courses on identifying phishing emails, texts, or calls. </p>
+                            <p>Use simulated phishing attacks to test and strengthen users' awareness.</p>
+                            <h3>Use Multi-Factor Authentication (MFA)</h3>
+                            <p><b>Solution:</b>Require multiple forms of verification, such as passwords and one-time codes.</p>  
+                            <p><b>Why:</b>MFA makes it harder for attackers to access accounts even if they obtain login credentials.</p> 
+                            <p><b>Example:</b>Using SMS codes, authentication apps, or biometric verification along with passwords.</p>
+                            <h3>Enable Email Security Filters</h3>  
+                            <p><b>Solution:</b>Employ advanced email filtering to block phishing emails.</p> 
+                            <p><b>How:</b></p>  
+                            <p>Use spam filters and email protection tools to detect and quarantine suspicious messages. </p>
+                            <p>Implement Domain-based Message Authentication, Reporting, and Conformance (DMARC) to prevent spoofing.</p>
+                            <h3>Verify Before Trusting Links or Attachments</h3> 
+                            <p><b>Solution:</b>b>Encourage skepticism toward unsolicited emails, links, or attachments.</b></p>
+                            <p><b>How:</b></p>  
+                            <p>Hover over links to check the URL before clicking.</p>  
+                            <p>Avoid downloading attachments from unknown or unverified senders.</p>
+                            <h3>Check URLs Carefully</h3> 
+                            <p><b>Solution:</b>Be cautious of URLs that mimic legitimate websites.</p>  
+                            <p><b>How:</b></p>  
+                            <p>Look for HTTPS and ensure the website address is spelled correctly. </p> 
+                            <p>Use website reputation checkers or tools to verify legitimacy.</p>
+                            <h3>Avoid Sharing Sensitive Information Unnecessarily</h3>
+                            <p><b>Solution:</b>Never provide personal or financial information through email, text, or phone unless certain of legitimacy. </p> 
+                            <p><b>How:</b></p> 
+                            <p>Confirm requests directly with the organization through verified channels, such as their official phone number.</p>
+                            <h3> Keep Systems and Software Updated</h3> 
+                            <p><b>Solution:</b>Regularly update operating systems, applications, and security software.</p>  
+                            <p><b>Why:</b>Patches fix vulnerabilities that attackers may exploit for phishing.  </p>
+                            <p><b>How:</b></p> Enable automatic updates to ensure the latest security patches are installed.</p>
+                            <h3>Deploy Anti-Phishing Tools</h3> 
+                            <p><b>Solution:</b>Utilize tools and extensions to block phishing websites and scams. </p> 
+                            <p><b>How:</b></p>  
+                            <p>Install browser extensions that identify and warn against phishing sites. </p> 
+                            <p>Use network monitoring tools to identify unusual activity.</p>
+                            <h3>Secure Networks</h3>
+                            <p><b>Solution:</b>Use secure, trusted networks for online activities.</p>  
+                            <p><b>How:</b></p>  
+                            <p>Avoid public Wi-Fi networks for sensitive transactions or use a Virtual Private Network (VPN). </p> 
+                            <p>Secure home or office networks with strong passwords and encryption protocols like WPA3.</p>
+                            <h3>Develop a Cybersecurity Response Plan</h3> 
+                            <p><b>Solution:</b>Prepare a strategy for handling phishing attacks promptly.</p>  
+                            <p><b>How:</b></p>  
+                            <p>Report phishing emails to the IT or cybersecurity team.  </p>
+                            <p>Ensure backups of important data to reduce the impact of ransomware or data breaches. </p> 
+                            <p>Have an incident response team in place to address threats immediately.</p>
+                            <p>By consistently applying these solutions, individuals and organizations can significantly reduce their vulnerability to phishing attacks.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Advanced Tips for Avoiding Phishing</summary>
+                        <div class="dropdown-content">
+                            <h3>Use a Password Manager</h3>
+                            <p>Password managers generate strong, unique passwords for each site.</p>
+                            <p>They prevent attackers from stealing passwords through phishing sites.</p>
+                            <h3>Enable DNS Filtering</h3>
+                            <p>DNS filtering blocks access to malicious websites before you even click on them.</p>
+                            <p>Many enterprise security systems use DNS filtering to prevent phishing.</p>
+                            <h3>Be Aware of Deepfake Phishing</h3>
+                            <p>Attackers are now using AI-generated voice & video deepfakes to impersonate CEOs, relatives, and even customer support agents.</p>
+                            <p>Always verify video calls, phone calls, and voice messages before sharing sensitive information.</p>
+                            <h3>Regularly Update Your Software</h3>
+                            <p>Phishing attacks often exploit outdated software vulnerabilities.</p>
+                            <p>Keep your browser, operating system, and antivirus software updated.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How to Identify a Phishing Attack</summary>
+                        <div class="dropdown-content">
+                            <h3>🔍 Signs of Phishing Emails & Messages</h3>
+                            <p>✔ Generic Greetings: “Dear Customer” instead of your real name.</p>
+                            <p>✔ Urgent Language: “Act now or your account will be suspended!”</p>
+                            <p>✔ Suspicious Links: Hover over links to check their real destination.</p>
+                            <p>✔ Attachments: Unusual attachments may contain malware.</p>
+                            <p>✔ Poor Grammar & Spelling: Legitimate companies use proper language.</p>
+                            <p>✔ Fake Email Addresses: The sender's email may look similar but has slight changes (e.g., support@bank-secure.com instead of support@bank.com).</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What to Do If You Get Phished</summary>
+                        <div class="dropdown-content">
+                            <p>🔹 Change your passwords immediately.</p>
+                            <p>🔹 Report the phishing attempt to your IT team or service provider.</p>
+                            <p>🔹 Scan your device for malware.</p>
+                            <p>🔹 If money was stolen, contact your bank or financial institution.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Real-World Examples of Phishing Attacks</summary>
+                        <div class="dropdown-content">
+                            <h3>The $100 Million Google & Facebook Scam (2013–2015)</h3>
+                            <p>Attackers impersonated a hardware supplier and sent fake invoices to Google and Facebook.</p>
+                            <p>The companies unknowingly wired over $100 million to the scammers.</p>
+                            <p><b>Lesson:</b> Always verify invoices and emails before sending payments.</p>
+                            <h3>Twitter Bitcoin Scam (2020)</h3>
+                            <p>Hackers hijacked verified Twitter accounts, including Elon Musk, Bill Gates, and Apple.</p>
+                            <p>They tweeted a fake Bitcoin giveaway, tricking people into sending money.</p>
+                            <p><b>Lesson:</b> Never trust online giveaways that ask for payment upfront.</p>
+                            <h3>The UK National Health Service (NHS) Phishing Attack (2017)</h3>
+                            <p>Attackers used a fake NHS email to spread ransomware.</p>
+                            <p>Thousands of hospitals and patient records were compromised.</p>
+                            <p><b>Lesson:</b> Always verify emails before downloading attachments.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How to Report Phishing Attacks</summary>
+                        <div class="dropdown-content">
+                            <p>If you encounter phishing attempts, report them to:</p>
+                            <p><b>Google:</b> Report phishing websites at Google Safe Browsing.</p>
+                            <p><b>Microsoft:</b> Forward phishing emails to phish@office365.microsoft.com.</p>
+                            <p><b>Anti-Phishing Working Group (APWG):</b> Report phishing emails to reportphishing@apwg.org.</p>
+                            <p><b>Your Bank:</b> Contact customer support if you receive fake banking emails.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>The Role of Artificial Intelligence in detecting Phishing</summary>
+                        <div class="dropdown-content">
+                            <h3>AI-Based Email Security Filters</h3>
+                            <p>AI analyzes millions of emails to detect patterns of phishing attacks.</p>
+                            <p>Machine learning algorithms can identify suspicious links, fake email addresses, and phishing language.</p>
+                            <h3>Behavioral Analysis for Fraud Detection</h3>
+                            <p>AI monitors user behavior to detect anomalies (e.g., logging in from an unusual location).</p>
+                            <p>If an account suddenly starts sending bulk phishing emails, AI can block access automatically.</p>
+                            <h3>Real-Time Threat Intelligence</h3>
+                            <p>AI can scan websites and links in real time to determine if they are fraudulent.</p>
+                            <p>If a user clicks on a phishing link, AI tools can immediately block the site and alert security teams.</p>
+                            <h3>AI-Powered Chatbots for User Awareness</h3>
+                            <p>Companies use AI chatbots to train employees on phishing awareness.</p>
+                            <h3>AI can simulate real phishing attacks to test employees and improve security awareness.</h3>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Phishing vs. Other Cyber Threats</summary>
+                        <div class="dropdown-content">
+                            Cyber threats come in different forms, and phishing is just one type of attack. Here’s how phishing compares to malware, ransomware, and social engineering:
+                            
+                            <h3>Malware</h3>
+                            <p>Malicious software designed to damage, steal, or spy on data.</p>
+                            <p>Includes viruses, worms, Trojans, and spyware.</p>
+                            <p><b>Example:</b> Clicking a fake link that downloads a Trojan virus, giving hackers access to your files.</p>
+                            <h3>Ransomware</h3>
+                            <p>A type of malware that locks files or entire systems until a ransom is paid.</p>
+                            <p>Often spread through phishing emails or malicious downloads.</p>
+                            <p><b>Example:</b> A fake invoice email contains a ransomware attachment, encrypting all files until payment is made.</p>
+                            <h3>Social Engineering</h3>
+                            <p>A psychological manipulation tactic where attackers exploit human trust to gain access to sensitive information.</p>
+                            <p>Phishing is a type of social engineering, but other examples include impersonation, tailgating, and baiting.</p>
+                            <p><b>Example:</b>A hacker calls an employee, pretending to be IT support, and tricks them into revealing their login details.</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Cyber Threat</th>
+                                        <th>Method</th>
+                                        <th>Goal</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Phishing</strong></td>
+                                        <td>Emails, SMS, calls</td>
+                                        <td>Steal login credentials & personal data</td>
+                                        <td>Fake bank email with a phishing link</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Malware</strong></td>
+                                        <td>Infected downloads, USB drives</td>
+                                        <td>Infect devices & steal data</td>
+                                        <td>Trojan virus stealing passwords</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ransomware</strong></td>
+                                        <td>Malicious links & attachments</td>
+                                        <td>Encrypt files & demand payment</td>
+                                        <td>Files locked until ransom is paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Social Engineering</strong></td>
+                                        <td>Psychological tricks</td>
+                                        <td>Manipulate people to give access</td>
+                                        <td>Fake IT support call asking for credentials</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="bryannumfor@gmail.com"><i class="fa-solid fa-envelope" style="color: white"></i></a></p>
+                <p>Phone: <a href=https://wa.link/qaur5b><i class="fa-brands fa-whatsapp" style="color: green;"></i></a></p>
+                <p>Location: Yaounde, Cameroon</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="https://linkedin.com/in/numfor-bryan" target="_blank" aria-label="LinkedIn">LinkedIn</a> | 
+                <a href="https://github.com/NumforBryan33232" target="_blank" aria-label="GitHub">GitHub</a> | 
+                <a href="https://instagram.com/ruffy.bryan" target="_blank" aria-label="Instagram">Instagram</a> | 
+                <a href="https://twitter.com/RuffyDayo" target="_blank" aria-label="Twitter">Twitter</a>
+            </div>
+            <div class="footer-credits">
+                <p>&copy; 2025 FINAL YEAR PROJECT. All Rights Reserved.</p>
+                <p>Built with ❤️ by NUMFOR BRYAN ASSAH.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../static/JS/all.js"></script>
+</body>
+</html>
