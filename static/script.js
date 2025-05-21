@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const url = urlInput.value;
         loader.style.display = "block"; 
 
-        fetch("http://127.0.0.1:8000/predict", {
+        fetch("https://phishing-detector-8xam.onrender.com/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
